@@ -14,14 +14,14 @@ class SnakeCaseDto
         return $this->firstName;
     }
 
+    public function set_first_name($firstName)
+    {
+        $this->firstName = $firstName;
+    }
+
     public function get_phone()
     {
         return $this->phone;
-    }
-
-    public function get_email()
-    {
-        return $this->email;
     }
 
     public function set_phone($phone)
@@ -32,6 +32,11 @@ class SnakeCaseDto
     public function set_email($email)
     {
         $this->email = $email;
+    }
+
+    public function get_email()
+    {
+        return $this->email;
     }
 
     public function set_street_number_suffix($streetNumberSuffix)

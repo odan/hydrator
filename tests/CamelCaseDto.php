@@ -9,6 +9,11 @@ class CamelCaseDto
     protected $email;
     protected $streetNumberSuffix;
 
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+    }
+
     public function getFirstName()
     {
         return $this->firstName;
@@ -19,14 +24,14 @@ class CamelCaseDto
         return $this->phone;
     }
 
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
     public function setPhone($phone)
     {
         $this->phone = $phone;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
     }
 
     public function setEmail($email)
