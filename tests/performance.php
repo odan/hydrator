@@ -14,15 +14,15 @@ $arr['not existing item'] = "test";
 $start = microtime(true);
 
 for ($i = 0; $i < 10000; $i++) {
-    $hydrator = new ClassMethod(ClassMethod::CAMEL_CASE);
+    $hydrator = new ClassMethod();
     $object = $hydrator->hydrate($arr, new \Odan\Test\CamelCaseDto());
     $hydrator->extract($object);
 
-    $hydrator = new \Odan\Hydrator\ObjectProperty(ClassMethod::CAMEL_CASE);
+    $hydrator = new \Odan\Hydrator\ObjectProperty();
     $object = $hydrator->hydrate($arr, new \Odan\Test\CamelCasePoco());
     $hydrator->extract($object);
 
-    $hydrator = new \Odan\Hydrator\ObjectProperty(ClassMethod::SNAKE_CASE);
+    $hydrator = new \Odan\Hydrator\ObjectProperty();
     $object = $hydrator->hydrate($arr, new \Odan\Test\SnakeCasePoco());
     $hydrator->extract($object);
 }
