@@ -1,5 +1,7 @@
 # Hydrator
- 
+
+A high performance hydrator for PHP.
+
 [![Latest Version on Packagist](https://img.shields.io/github/release/odan/hydrator.svg)](https://github.com/odan/hydrator/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.org/odan/hydrator.svg?branch=master)](https://travis-ci.org/odan/hydrator)
