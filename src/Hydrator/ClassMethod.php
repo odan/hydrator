@@ -10,32 +10,11 @@ class ClassMethod implements HydratorInterface
 {
 
     /**
-     * Camel case
-     */
-    const CAMEL_CASE = 1;
-
-    /**
-     * Snake case
-     */
-    const SNAKE_CASE = 2;
-
-    /**
-     * @var int
-     */
-    protected $case;
-
-    /**
-     * ClassMethod constructor.
-     *
-     * @param int $case
-     */
-    public function __construct($case = self::SNAKE_CASE)
-    {
-        $this->case = $case;
-    }
-
-    /**
      * Hydrate $object with the provided $data.
+     *
+     * Naming strategy:
+     *
+     * Naming strategy: Call camelCase setter methods (getFooBarBaz)
      *
      * @param array $data
      * @param object $object
@@ -45,11 +24,7 @@ class ClassMethod implements HydratorInterface
     {
         $methods = array_flip(get_class_methods(get_class($object)));
         foreach ($data as $key => $value) {
-            if ($this->case === self::SNAKE_CASE) {
-                $method = StringUtil::snake('set_' . $key);
-            } else {
-                $method = StringUtil::camel('set_' . $key);
-            }
+            $method = StringUtil::camel('set_' . $key);
             if (isset($methods[$method])) {
                 $object->$method($value);
             }
@@ -59,6 +34,8 @@ class ClassMethod implements HydratorInterface
 
     /**
      * Extract values from an object
+     *
+     * Naming strategy: Converts array keys to snake_case.
      *
      * @param  object $object
      * @return array
@@ -73,11 +50,7 @@ class ClassMethod implements HydratorInterface
             if (!isset($matches[2])) {
                 continue;
             }
-            if ($this->case === self::SNAKE_CASE) {
-                $key = StringUtil::snake($matches[2]);
-            } else {
-                $key = StringUtil::camel($matches[2]);
-            }
+            $key = StringUtil::snake($matches[2]);
             $array[$key] = $object->$method();
         }
         return $array;

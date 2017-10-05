@@ -18,10 +18,6 @@ for ($i = 0; $i < 10000; $i++) {
     $object = $hydrator->hydrate($arr, new \Odan\Test\CamelCaseDto());
     $hydrator->extract($object);
 
-    $hydrator = new ClassMethod(ClassMethod::SNAKE_CASE);
-    $object = $hydrator->hydrate($arr, new \Odan\Test\SnakeCaseDto());
-    $hydrator->extract($object);
-
     $hydrator = new \Odan\Hydrator\ObjectProperty(ClassMethod::CAMEL_CASE);
     $object = $hydrator->hydrate($arr, new \Odan\Test\CamelCasePoco());
     $hydrator->extract($object);

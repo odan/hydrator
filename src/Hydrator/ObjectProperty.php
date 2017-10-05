@@ -8,34 +8,10 @@ namespace Odan\Hydrator;
  */
 class ObjectProperty implements HydratorInterface
 {
-
-    /**
-     * Camel case
-     */
-    const CAMEL_CASE = 1;
-
-    /**
-     * Snake case
-     */
-    const SNAKE_CASE = 2;
-
-    /**
-     * @var int
-     */
-    protected $case;
-
-    /**
-     * ClassMethod constructor.
-     *
-     * @param int $case
-     */
-    public function __construct($case = self::CAMEL_CASE)
-    {
-        $this->case = $case;
-    }
-
     /**
      * Hydrate $object with the provided $data.
+     *
+     * Naming strategy: Converts properties to camelCase (e.g. fooBarBaz).
      *
      * @param array $data
      * @param object $object
@@ -45,11 +21,7 @@ class ObjectProperty implements HydratorInterface
     {
         $properties = get_class_vars(get_class($object));
         foreach ($data as $name => $value) {
-            if ($this->case === self::SNAKE_CASE) {
-                $property = StringUtil::snake($name);
-            } else {
-                $property = StringUtil::camel($name);
-            }
+            $property = StringUtil::camel($name);
             if (array_key_exists($property, $properties)) {
                 $object->{$property} = $value;
             }
@@ -60,6 +32,8 @@ class ObjectProperty implements HydratorInterface
     /**
      * Extract values from an object
      *
+     * Naming strategy: Converts array keys to snake_case.
+     *
      * @param object $object
      * @return array
      */
@@ -68,11 +42,7 @@ class ObjectProperty implements HydratorInterface
         $array = array();
         $properties = get_class_vars(get_class($object));
         foreach ($properties as $property => $value) {
-            if ($this->case === self::SNAKE_CASE) {
-                $key = StringUtil::snake($property);
-            } else {
-                $key = StringUtil::camel($property);
-            }
+            $key = StringUtil::snake($property);
             $array[$key] = $object->{$property};
         }
         return $array;
