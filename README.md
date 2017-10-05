@@ -80,7 +80,7 @@ Array
 (
     [id] => 1
     [username] => admin
-    [firstName] => John Doe
+    [first_name] => John Doe
     [email] => john@example.com
 )
 */
