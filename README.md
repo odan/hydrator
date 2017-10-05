@@ -7,6 +7,16 @@
 [![Quality Score](https://scrutinizer-ci.com/g/odan/hydrator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/odan/hydrator/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/odan/hydrator.svg)](https://packagist.org/packages/odan/hydrator)
 
+## Requirements
+
+* PHP 7.x
+* MySQL
+
+## Installation
+
+```shell
+composer require odan/hydrator
+```
 
 ## Features
 
@@ -19,18 +29,6 @@ any public properties will be used for extraction.
  
 Any data key matching a setter method will be called in order to hydrate;
 any method matching a getter method will be called for extraction.
-
-## Installation
-
-```shell
-composer require odan/hydrator
-```
-
-## Requirements
-
-* PHP 7.x
-* MySQL
-
 
 ## Usage
 
