@@ -77,7 +77,7 @@ class ObjectPropertyTest extends AbstractTest
      * @return void
      * @covers ::extract
      */
-    public function testExtractCamelCase()
+    public function testExtractSnakeCase()
     {
         $object = new SnakeCasePoco();
         $object->first_name = 'Max';
@@ -104,7 +104,7 @@ class ObjectPropertyTest extends AbstractTest
      * @covers ::extract
      * @covers \Odan\Hydrator\StringUtil::snake
      */
-    public function testExtractSnakeCase()
+    public function testExtractCamelCase()
     {
         $object = new CamelCasePoco();
         $object->firstName = 'Max';
