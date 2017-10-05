@@ -49,7 +49,7 @@ $userRow = [
     'id' => 1,
     'username' => 'admin',
     'first_name' => 'John Doe',
-    'email' => 'john@exmaple.com'
+    'email' => 'john@example.com'
 ];
 
 // Create the hydrator
@@ -65,7 +65,7 @@ User Object
     [id] => 1
     [username] => admin
     [firstName] => John Doe
-    [email] => john@exmaple.com
+    [email] => john@example.com
 )
 */
 
@@ -80,7 +80,7 @@ Array
     [id] => 1
     [username] => admin
     [firstName] => John Doe
-    [email] => john@exmaple.com
+    [email] => john@example.com
 )
 */
 ```
