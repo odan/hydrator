@@ -57,6 +57,7 @@ $hydrator = new \Odan\Hydrator\ObjectProperty();
 
 // Convert array to a new User object (with lower camel case properties)
 $user = $hydrator->hydrate($userRow, new User());
+
 print_r($user);
 
 /*
@@ -84,7 +85,6 @@ Array
 )
 */
 ```
-
 
 ## License
 
