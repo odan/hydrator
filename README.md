@@ -11,7 +11,7 @@ A high performance hydrator for PHP.
 
 ## Requirements
 
-* PHP 7.x
+* PHP >= 7.1
 * MySQL
 
 ## Installation
