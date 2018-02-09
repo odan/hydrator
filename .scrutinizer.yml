@@ -31,10 +31,6 @@ build:
         memcached: false
         neo4j: false
         rabbitmq: false
-    # Run after dependencies
-    project_setup:
-        before:
-            - mysql -e "CREATE DATABASE database_test"
     tests:
         override:
             -

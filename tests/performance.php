@@ -30,4 +30,3 @@ for ($i = 0; $i < 10000; $i++) {
 $end = microtime(true);
 echo "Time: " . ($end - $start) . "\n";
 echo "Memory: " . memory_get_peak_usage(true) . "\n";
-
