@@ -37,7 +37,7 @@ class ObjectPropertyTest extends AbstractTest
         $expected->email = 'mail@example.com';
         $expected->phone = '123456';
 
-        $this->assertEquals($expected, $actual);
+        $this->assertSame($expected, $actual);
     }
 
     /**
@@ -67,7 +67,7 @@ class ObjectPropertyTest extends AbstractTest
         $expected->email = 'mail@example.com';
         $expected->phone = '123456';
 
-        $this->assertEquals($expected, $actual);
+        $this->assertSame($expected, $actual);
     }
 
     /**
@@ -93,7 +93,7 @@ class ObjectPropertyTest extends AbstractTest
         $expected['email'] = "mail@example.com";
         $expected['phone'] = "123456";
 
-        $this->assertEquals($expected, $actual);
+        $this->assertSame($expected, $actual);
     }
 
     /**
@@ -120,6 +120,6 @@ class ObjectPropertyTest extends AbstractTest
         $expected['email'] = "mail@example.com";
         $expected['phone'] = "123456";
 
-        $this->assertEquals($expected, $actual);
+        $this->assertSame($expected, $actual);
     }
 }
