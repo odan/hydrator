@@ -86,6 +86,12 @@ Array
 */
 ```
 
+## Alternatives
+
+* https://github.com/zendframework/zend-hydrator
+* https://github.com/doctrine/DoctrineModule/blob/master/docs/hydrator.md
+* https://github.com/mark-gerarts/automapper-plus
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
