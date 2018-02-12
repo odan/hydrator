@@ -37,7 +37,7 @@ class ClassMethodTest extends AbstractTest
         $expected->setEmail('mail@example.com');
         $expected->setPhone('123456');
 
-        $this->assertSame($expected, $actual);
+        $this->assertEquals($expected, $actual);
     }
 
     /**
@@ -67,7 +67,7 @@ class ClassMethodTest extends AbstractTest
         $expected['updated_by'] = null;
         $expected['updated_at'] = null;
 
-        $this->assertSame($expected, $actual);
+        $this->assertEquals($expected, $actual);
     }
 
     /**
@@ -106,6 +106,6 @@ class ClassMethodTest extends AbstractTest
         $expected->setUpdatedAt(new \DateTime('2018-02-01 00:00:00'));
         $expected->setUpdatedBy(2);
 
-        $this->assertSame($expected, $actual);
+        $this->assertEquals($expected, $actual);
     }
 }
