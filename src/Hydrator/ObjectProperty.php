@@ -26,6 +26,7 @@ class ObjectProperty implements HydratorInterface
                 $object->{$property} = $value;
             }
         }
+
         return $object;
     }
 
@@ -45,6 +46,7 @@ class ObjectProperty implements HydratorInterface
             $key = StringUtil::snake($property);
             $array[$key] = $object->{$property};
         }
+
         return $array;
     }
 }

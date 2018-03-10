@@ -14,6 +14,7 @@ class StringUtil
     public static function camel($value)
     {
         $value = ucwords(str_replace(['-', '_'], ' ', $value));
+
         return lcfirst(str_replace(' ', '', $value));
     }
 
@@ -28,6 +29,7 @@ class StringUtil
     {
         $value = preg_replace('/\s+/u', '', $value);
         $value = preg_replace('/(.)(?=[A-Z])/u', '$1' . $delimiter, $value);
+
         return mb_strtolower($value, 'UTF-8');
     }
 }

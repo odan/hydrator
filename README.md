@@ -3,7 +3,7 @@
 A high performance hydrator for PHP.
 
 [![Latest Version on Packagist](https://img.shields.io/github/release/odan/hydrator.svg)](https://github.com/odan/hydrator/releases)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![Build Status](https://travis-ci.org/odan/hydrator.svg?branch=master)](https://travis-ci.org/odan/hydrator)
 [![Coverage Status](https://scrutinizer-ci.com/g/odan/hydrator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/odan/hydrator/code-structure)
 [![Quality Score](https://scrutinizer-ci.com/g/odan/hydrator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/odan/hydrator/?branch=master)
@@ -12,7 +12,6 @@ A high performance hydrator for PHP.
 ## Requirements
 
 * PHP >= 7.1
-* MySQL
 
 ## Installation
 

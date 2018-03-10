@@ -52,6 +52,7 @@ class ClassMethod implements HydratorInterface
 
             $object->$method($value);
         }
+
         return $object;
     }
 
@@ -76,6 +77,7 @@ class ClassMethod implements HydratorInterface
             $key = StringUtil::snake($matches[2]);
             $array[$key] = $object->$method();
         }
+
         return $array;
     }
 }
