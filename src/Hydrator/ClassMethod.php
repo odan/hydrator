@@ -85,7 +85,7 @@ class ClassMethod implements HydratorInterface
         $methods = get_class_methods(get_class($object));
 
         foreach ($methods as $method) {
-            preg_match(' /^(get)(.*?)$/i', $method, $matches);
+            preg_match('/^(get)(.*?)$/i', $method, $matches);
             if (!isset($matches[2])) {
                 continue;
             }
