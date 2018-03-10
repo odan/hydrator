@@ -14,7 +14,9 @@ class ClassMethodTest extends AbstractTest
      * Test.
      *
      * @return void
+     * @throws \ReflectionException
      * @covers ::hydrate
+     * @covers ::getValue
      * @covers \Odan\Hydrator\StringUtil::camel
      */
     public function testHydrateCamelCase()
