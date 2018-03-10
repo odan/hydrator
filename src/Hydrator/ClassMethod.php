@@ -50,7 +50,7 @@ class ClassMethod implements HydratorInterface
      * @param string $class The class name
      * @param string $method The method name
      * @param mixed $value The default value
-     * @return mixed|DateTime|DateTimeImmutable The value
+     * @return mixed The value
      * @throws ReflectionException
      */
     private function getValue(string $class, string $method, $value)
