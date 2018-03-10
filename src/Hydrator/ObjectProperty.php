@@ -22,7 +22,7 @@ class ObjectProperty implements HydratorInterface
         $properties = get_class_vars(get_class($object));
         foreach ($data as $name => $value) {
             $property = StringUtil::camel($name);
-            if (array_key_exists($property, $properties)) {
+            if (isset($properties[$property]) || array_key_exists($property, $properties)) {
                 $object->{$property} = $value;
             }
         }
