@@ -21,6 +21,9 @@ composer require odan/hydrator
 
 ## Features
 
+* Array to Object
+* Object to Array
+
 ### ObjectProperty
 
 Any data key matching a publicly accessible property will be hydrated;
