@@ -78,6 +78,7 @@ class ClassMethodTest extends AbstractTest
      * @return void
      * @throws \ReflectionException
      * @covers ::hydrate
+     * @covers ::getValue
      * @covers \Odan\Hydrator\StringUtil::snake
      */
     public function testHydrateSnakeCase()
