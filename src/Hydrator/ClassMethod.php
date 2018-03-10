@@ -38,22 +38,37 @@ class ClassMethod implements HydratorInterface
                 continue;
             }
 
-            $parameter = new ReflectionParameter(array($class, $method), 0);
-            $type = $parameter->getType();
-            if ($type) {
-                $dataType = $type->getName();
-                if ($dataType === 'DateTimeImmutable') {
-                    $value = new DateTimeImmutable($value);
-                }
-                if ($dataType === 'DateTime') {
-                    $value = new DateTime($value);
-                }
-            }
-
-            $object->$method($value);
+            $object->$method($this->getValue($class, $method, $value));
         }
 
         return $object;
+    }
+
+    /**
+     * Get value.
+     *
+     * @param string $class The class name
+     * @param string $method The method name
+     * @param mixed $value The default value
+     * @return mixed|DateTime|DateTimeImmutable The value
+     * @throws ReflectionException
+     */
+    private function getValue(string $class, string $method, $value)
+    {
+        $parameter = new ReflectionParameter(array($class, $method), 0);
+        $type = $parameter->getType();
+
+        if ($type) {
+            $dataType = $type->getName();
+            if ($dataType === 'DateTimeImmutable') {
+                $value = new DateTimeImmutable($value);
+            }
+            if ($dataType === 'DateTime') {
+                $value = new DateTime($value);
+            }
+        }
+
+        return $value;
     }
 
     /**
