@@ -19,10 +19,9 @@ class ObjectProperty implements HydratorInterface
      */
     public function hydrate(array $data, $object)
     {
-        $properties = get_class_vars(get_class($object));
         foreach ($data as $name => $value) {
             $property = StringUtil::camel($name);
-            if (isset($properties[$property]) || array_key_exists($property, $properties)) {
+            if (property_exists($object, $property)) {
                 $object->{$property} = $value;
             }
         }
